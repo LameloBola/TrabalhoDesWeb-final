@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Pizzaria Express</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <script src="scripts.js"></script>
+    <div class="topo">
+        <div class="logo-titulo">
+            <img src="img/logo_pizzaria.webp" alt="Pizza" class="logo">
+            <span class="nome-logo">Pizzaria Express</span>
+        </div>
+        <div class="nav-texts">
+            <p id="home"><a href="home.html">Página Inicial</a></p>
+            <p id="cardapio"><a href="cardapio.html">Cardápio</a></p>
+            <p id="contato"><a href="contato.html">Contato</a></p>
+            <p id="login"><a href="login.html">Login</a></p>
+        </div>
+    </div>
+
+    <main>
+        <section class="hero" id="home">
+            <div>
+                <h1>Pizzaria Express</h1>
+                <p>Pizza quentinha, entrega rápida e sabor caseiro para sua casa.</p>
+                <a class="btn" href="home.html">Página Inicial</a>
+                <button class="btn-anterior" data-prev="contato.html">Anterior</button>
+            </div>
+        </section>
+
+        <section class="contato" id="contato">
+            <div class="contact-panel">
+                
+                <p class="disabled-note">Login desabilitado temporariamente para este projeto.</p>
+                <form class="Container" action="/login" method="post">
+    
+        <p>Login</p>
+            <label>Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+           
+            <label>Senha:</label><br>
+            <input type="password" id="senha" name="senha" required><br>
+        
+        <button type="submit" action="home.html">Login</button>
+    </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

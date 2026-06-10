@@ -1,0 +1,251 @@
+:root {
+    --laranja: #000000;
+    --cinza: #666;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: url("img/fundo_pizzaria1.webp") center/cover fixed no-repeat;
+    padding-top: 80px;
+    min-height: 100vh;
+}
+
+.topo {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: black;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 60px;
+}
+
+.logo-titulo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-texts {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-texts a {
+    color: white;
+    text-decoration: none;
+}
+.nav-texts a:hover {
+    color: #ff6600;
+}
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: rgba(0,0,0,0.25);
+    border-radius: 15px;
+}
+.hero h1 {
+    margin-bottom: 10px;
+    color: white;
+    font-size: 52px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+}
+
+.hero p {
+    color: white;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+    margin-bottom: 20px;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.contato {
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(255, 127, 0, 0.18);
+    margin-top: 20px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.contact-card {
+    background: #fff;
+    padding: 18px;
+    border-radius: 14px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.contact-card strong {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.btn,
+button {
+    background: var(--laranja);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.lista-cardapio {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.item-cardapio {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+}
+.item-cardapio span {
+    color: #ff6600;
+    font-size: 24px;
+    font-weight: bold;
+}
+.item-cardapio:hover {
+    transform: translateY(-5px);
+}
+.foto-cardapio {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.cardapio{
+    text-align: center;
+}
+.Container {
+    max-width: 400px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.Container input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.btn-anterior, .btn-proximo {
+    position: fixed;
+    bottom: 18px;
+    background: var(--laranja);
+    color: white;
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.btn-anterior { left: 18px; max-width: 160px; }
+.btn-proximo { right: 18px; max-width: 160px; }
+
+@media (max-width: 600px) {
+    .lista-cardapio {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-texts {
+        flex-direction: column;
+    }
+}
+
+.sobre {
+    background: rgba(255,255,255,0.95);
+    border-radius: 20px;
+    padding: 50px;
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.sobre-texto {
+    flex: 1;
+}
+
+.subtitulo {
+    color: #e63946;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.sobre h2 {
+    font-size: 48px;
+    margin: 15px 0 25px;
+    line-height: 1.1;
+}
+
+.sobre p {
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.sobre-imagem {
+    flex: 1;
+}
+
+.sobre-imagem img {
+    width: 100%;
+    border-radius: 15px;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .sobre {
+        flex-direction: column;
+    }
+
+    .sobre h2 {
+        font-size: 34px;
+    }
+}
+
+
+.nav-texts a.active { color:#ff6600; font-weight:bold; border-bottom:2px solid #ff6600; }
